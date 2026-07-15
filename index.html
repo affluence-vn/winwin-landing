@@ -110,14 +110,16 @@
   .head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:14px 0 12px}
   .head p{color:var(--muted);font-size:1.05rem}
 
-  /* achievements */
-  .ach-band{background:var(--brand-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--ink);padding:20px 0}
-  .ach-scroll{display:flex;gap:14px;overflow-x:auto;padding:8px 22px;max-width:var(--maxw);margin:0 auto;scrollbar-width:none}
-  .ach-scroll::-webkit-scrollbar{display:none}
-  .ach{flex:0 0 auto;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;min-width:150px;text-align:center;box-shadow:var(--shadow-sm)}
-  .ach .score{font-size:1.7rem;font-weight:900;color:var(--gold);line-height:1}
-  .ach .who{font-weight:700;font-size:.92rem;margin-top:4px;color:var(--ink)}
-  .ach .from{font-size:.74rem;color:var(--muted)}
+  /* achievements gallery */
+  .ach-gallery{padding:66px 0 60px;background:var(--brand-soft-2)}
+  .ach-gallery .head{margin-bottom:30px}
+  .ach-scroll{display:flex;gap:18px;overflow-x:auto;padding:6px 22px 16px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .ach-scroll::-webkit-scrollbar{height:8px}
+  .ach-scroll::-webkit-scrollbar-track{background:transparent}
+  .ach-scroll::-webkit-scrollbar-thumb{background:#d5dcc4;border-radius:8px}
+  .ach-card{flex:0 0 auto;height:340px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);scroll-snap-align:center;background:#fff}
+  .ach-card img{height:100%;width:auto;display:block}
+  @media(max-width:560px){.ach-card{height:270px}}
 
   /* testimonials */
   .tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
@@ -338,22 +340,24 @@
   </div>
 </section>
 
-<!-- ACHIEVEMENTS BAND -->
-<div class="ach-band" id="thanh-tich">
-  <div class="ach-scroll">
-    <div class="ach"><div class="score">8.5</div><div class="who">Đào Khánh Ngân</div><div class="from">THPT Nguyễn Thượng Hiền</div></div>
-    <div class="ach"><div class="score">8.0</div><div class="who">Anh Duy</div><div class="from">Học viên</div></div>
-    <div class="ach"><div class="score">8.0</div><div class="who">Nguyễn Vinh</div><div class="from">Học sinh lớp 12</div></div>
-    <div class="ach"><div class="score">8.0</div><div class="who">Vĩnh Khang</div><div class="from">Sinh viên</div></div>
-    <div class="ach"><div class="score">8.0</div><div class="who">Phương Trinh</div><div class="from">Sinh viên</div></div>
-    <div class="ach"><div class="score">8.0</div><div class="who">Thượng Trần</div><div class="from">THPT Lê Hồng Phong</div></div>
-    <div class="ach"><div class="score">7.5</div><div class="who">Việt Châu</div><div class="from">THPT Nguyễn Thượng Hiền</div></div>
-    <div class="ach"><div class="score">7.5</div><div class="who">Trâm Anh</div><div class="from">ĐH Kinh Tế</div></div>
-    <div class="ach"><div class="score">7.5</div><div class="who">Minh Khôi</div><div class="from">THPT Nguyễn Thượng Hiền</div></div>
-    <div class="ach"><div class="score">7.0</div><div class="who">Tuấn Kiệt</div><div class="from">Sinh viên</div></div>
-    <div class="ach"><div class="score">7.0</div><div class="who">An Khang</div><div class="from">Sinh viên</div></div>
+<!-- ACHIEVEMENTS GALLERY -->
+<section class="ach-gallery" id="thanh-tich">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Thành tích học viên</span>
+      <h2>Gương mặt 8.0 – 8.5 IELTS tại WinWin</h2>
+      <p>Band điểm thật của học viên WinWin — chúc mừng các bạn đã bứt phá! Vuốt để xem thêm →</p>
+    </div>
   </div>
-</div>
+  <div class="ach-scroll">
+    <figure class="ach-card"><img src="thanhtich-ngan.jpg" alt="Đào Khánh Ngân — IELTS 8.5" loading="lazy"></figure>
+    <figure class="ach-card"><img src="thanhtich-anhduy.jpg" alt="Anh Duy — IELTS 8.0" loading="lazy"></figure>
+    <figure class="ach-card"><img src="thanhtich-nguyenvinh.jpg" alt="Nguyễn Vinh — IELTS 8.0" loading="lazy"></figure>
+    <figure class="ach-card"><img src="thanhtich-vinhkhang.jpg" alt="Vĩnh Khang — IELTS 8.0" loading="lazy"></figure>
+    <figure class="ach-card"><img src="thanhtich-phuongtrinh.jpg" alt="Phương Trinh — IELTS 8.0" loading="lazy"></figure>
+    <figure class="ach-card"><img src="thanhtich-minhtien.jpg" alt="Minh Tiến — IELTS 8.0" loading="lazy"></figure>
+  </div>
+</section>
 
 <!-- TESTIMONIALS -->
 <section class="section" id="cam-nhan">
