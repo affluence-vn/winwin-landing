@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS WinWin — Bứt phá IELTS 7.0+ | Trung tâm Ngoại ngữ WinWin</title>
+<meta name="description" content="IELTS WinWin — You Win, We Win. Khóa học IELTS, Tiếng Anh trẻ em (Cambridge) và Tiếng Trung tại Tân Phú, TP.HCM. Lộ trình cá nhân hóa, lớp nhỏ, giảng viên tận tâm. Đăng ký học thử miễn phí.">
+<meta property="og:title" content="IELTS WinWin — Bứt phá IELTS 7.0+ cùng WinWin">
+<meta property="og:description" content="Đăng ký học thử & tư vấn miễn phí. Lộ trình cá nhân hóa, lớp nhỏ, hot seat luyện Speaking như phòng thi thật.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --brand:#3c5a16;          /* WinWin forest/olive green (from logo) */
+    --brand-2:#2c4410;        /* darker green */
+    --brand-3:#4d7220;        /* lighter green */
+    --brand-soft:#eef3e4;     /* pale green wash */
+    --brand-soft-2:#f6f9ef;
+    --accent:#e0a41a;         /* gold — "win / medal" accent */
+    --accent-dark:#b9820c;
+    --ink:#1e2410;            /* near-black green ink */
+    --body:#40492f;           /* body text */
+    --muted:#6f7860;
+    --line:#e4e7db;
+    --white:#ffffff;
+    --zalo:#0068ff;
+    --radius:16px;
+    --shadow-sm:0 2px 8px rgba(30,36,16,.06);
+    --shadow:0 10px 30px rgba(30,36,16,.10);
+    --shadow-lg:0 24px 60px rgba(30,36,16,.16);
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--body);background:var(--white);line-height:1.6;font-size:16px;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{color:var(--ink);line-height:1.18;font-weight:800;letter-spacing:-.01em}
+  section{scroll-margin-top:90px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{display:inline-block;font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);background:var(--brand-soft);padding:7px 14px;border-radius:999px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:1rem;padding:14px 26px;border-radius:999px;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;white-space:nowrap}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--accent);color:#3a2a00;box-shadow:0 8px 20px rgba(224,164,26,.35)}
+  .btn-primary:hover{background:#eeb42e;transform:translateY(-2px)}
+  .btn-white{background:#fff;color:var(--brand-2)}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+  .btn-block{width:100%;justify-content:center}
+
+  /* ---------- HEADER ---------- */
+  header{position:sticky;top:0;z-index:50;background:var(--brand);color:#fff;box-shadow:0 2px 14px rgba(30,36,16,.18)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:baseline;gap:2px;font-weight:900;font-size:1.5rem;letter-spacing:-.02em;color:#fff}
+  .brand .w1{color:#fff}
+  .brand .w2{color:var(--accent)}
+  .brand small{display:block;font-size:.56rem;letter-spacing:.18em;font-weight:700;color:rgba(255,255,255,.72);text-transform:uppercase;margin-top:-4px}
+  .brand-txt{display:flex;flex-direction:column;line-height:1}
+  .menu{display:flex;align-items:center;gap:6px}
+  .menu a{padding:9px 14px;border-radius:999px;font-weight:600;font-size:.95rem;color:rgba(255,255,255,.9);transition:background .15s}
+  .menu a:hover{background:rgba(255,255,255,.14);color:#fff}
+  .menu .cta{background:var(--accent);color:#3a2a00;font-weight:800}
+  .menu .cta:hover{background:#eeb42e}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 60%,#233a0c 100%);color:#fff;padding:0 0 120px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 380px at 82% -8%,rgba(224,164,26,.20),transparent 60%);pointer-events:none}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:#fff;clip-path:polygon(0 100%,100% 100%,100% 34%,0 100%)}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start;padding-top:56px}
+  .hero-copy{padding-top:40px}
+  .hero-copy h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.35rem);margin:18px 0 16px}
+  .hero-copy h1 .hl{color:var(--accent)}
+  .hero-copy .lede{font-size:1.14rem;color:rgba(255,255,255,.92);max-width:33ch;margin-bottom:14px}
+  .hero-tag{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);color:#fff}
+  .trust{display:flex;flex-wrap:wrap;gap:18px 26px;margin:22px 0 26px}
+  .trust div{display:flex;flex-direction:column}
+  .trust b{font-size:1.55rem;color:var(--accent);font-weight:900;line-height:1}
+  .trust span{font-size:.82rem;color:rgba(255,255,255,.85)}
+  .actions{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* form card */
+  .form-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:26px 24px 22px;color:var(--body);position:relative}
+  .form-card h2{font-size:1.4rem;margin-bottom:2px}
+  .form-card .sub{font-size:.9rem;color:var(--muted);margin-bottom:16px}
+  .field{margin-bottom:12px}
+  .field label{display:block;font-size:.83rem;font-weight:700;color:var(--ink);margin-bottom:5px}
+  .field .req{color:#c0392b}
+  .field input,.field select,.field textarea{
+    width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:11px;font-size:.95rem;font-family:inherit;color:var(--ink);background:#fdfdfb;transition:border-color .15s,box-shadow .15s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brand-3);box-shadow:0 0 0 3px rgba(77,114,32,.15)}
+  .field textarea{resize:vertical;min-height:56px}
+  .consent{display:flex;gap:9px;align-items:flex-start;font-size:.8rem;color:var(--muted);margin:6px 0 14px}
+  .consent input{margin-top:3px;width:16px;height:16px;flex:0 0 auto;accent-color:var(--brand)}
+  .hp{position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;width:0}
+  .form-note{text-align:center;font-size:.76rem;color:var(--muted);margin-top:10px}
+  .thanks{text-align:center;padding:22px 6px}
+  .thanks .ok{width:64px;height:64px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 14px}
+  .thanks h3{font-size:1.3rem;margin-bottom:8px}
+  .thanks p{color:var(--muted);margin-bottom:16px}
+
+  /* ---------- SECTION SHELL ---------- */
+  .section{padding:74px 0}
+  .section.alt{background:var(--brand-soft-2)}
+  .head{text-align:center;max-width:720px;margin:0 auto 44px}
+  .head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:14px 0 12px}
+  .head p{color:var(--muted);font-size:1.05rem}
+
+  /* achievements */
+  .ach-band{background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 100%);color:#fff;padding:16px 0}
+  .ach-scroll{display:flex;gap:14px;overflow-x:auto;padding:8px 22px;max-width:var(--maxw);margin:0 auto;scrollbar-width:none}
+  .ach-scroll::-webkit-scrollbar{display:none}
+  .ach{flex:0 0 auto;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 16px;min-width:150px;text-align:center}
+  .ach .score{font-size:1.7rem;font-weight:900;color:var(--accent);line-height:1}
+  .ach .who{font-weight:700;font-size:.92rem;margin-top:4px}
+  .ach .from{font-size:.74rem;color:rgba(255,255,255,.75)}
+
+  /* testimonials */
+  .tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .quote{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:24px 24px 20px;box-shadow:var(--shadow-sm);position:relative}
+  .quote::before{content:"\201C";position:absolute;top:6px;left:14px;font-size:3.2rem;color:var(--brand-soft);font-family:Georgia,serif;line-height:1}
+  .quote p{position:relative;color:var(--body);font-size:.97rem;margin-bottom:14px}
+  .quote .who{display:flex;align-items:center;gap:10px}
+  .quote .av{width:40px;height:40px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex:0 0 auto}
+  .quote .who b{color:var(--ink);font-size:.95rem;display:block}
+  .quote .who span{font-size:.78rem;color:var(--muted)}
+  .quote .badge{margin-left:auto;background:var(--brand-soft);color:var(--brand);font-weight:800;font-size:.78rem;padding:4px 10px;border-radius:999px}
+
+  /* courses */
+  .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .course{background:#fff;border:1px solid var(--line);border-top:4px solid var(--brand-3);border-radius:14px;padding:22px 22px 20px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+  .course:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .course .tag{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-3)}
+  .course h3{font-size:1.22rem;margin:6px 0 8px}
+  .course .goal{display:inline-block;background:var(--brand-soft);color:var(--brand);font-weight:800;font-size:.8rem;padding:5px 12px;border-radius:999px;margin-bottom:12px}
+  .course ul{list-style:none;margin:0 0 16px}
+  .course li{position:relative;padding-left:22px;font-size:.9rem;color:var(--body);margin-bottom:7px}
+  .course li::before{content:"✓";position:absolute;left:0;top:0;color:var(--brand-3);font-weight:900}
+  .course .go{margin-top:auto;font-weight:800;color:var(--brand);font-size:.92rem;display:inline-flex;gap:6px;align-items:center}
+  .course:hover .go{color:var(--brand-2)}
+
+  /* features */
+  .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .feat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 22px;box-shadow:var(--shadow-sm)}
+  .feat .ic{width:52px;height:52px;border-radius:14px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:14px}
+  .feat h3{font-size:1.12rem;margin-bottom:7px}
+  .feat p{font-size:.92rem;color:var(--muted)}
+
+  /* partner band */
+  .partner{background:#fff;border-top:1px solid var(--line);padding:52px 0}
+  .partner .lab{text-align:center;font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+  .partner-row{display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap}
+  .p-logo{display:flex;align-items:center;gap:12px}
+  .p-logo img{height:52px;width:auto}
+  .affl{display:flex;align-items:center;gap:10px}
+  .affl img{height:40px;width:40px}
+  .affl .wm{font-weight:900;font-size:1.5rem;background:linear-gradient(90deg,#4f46e5,#9333ea);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .p-x{font-size:1.5rem;color:var(--muted);font-weight:300}
+  .partner p{text-align:center;max-width:620px;margin:20px auto 0;color:var(--muted);font-size:.92rem}
+  .partner p a{color:#7c3aed;font-weight:700}
+
+  /* CTA strip */
+  .cta-strip{background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 100%);color:#fff;text-align:center;padding:60px 0}
+  .cta-strip h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px}
+  .cta-strip p{color:rgba(255,255,255,.9);margin-bottom:24px;font-size:1.05rem}
+
+  /* footer */
+  footer{background:var(--brand-2);color:rgba(255,255,255,.82);padding:52px 0 26px}
+  .fgrid2{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+  footer h4{color:#fff;font-size:1.05rem;margin-bottom:14px}
+  footer .brand{font-size:1.5rem;margin-bottom:10px}
+  footer p,footer li{font-size:.92rem;line-height:1.7}
+  footer ul{list-style:none}
+  footer a:hover{color:#fff}
+  .foot-zalo{display:inline-flex;align-items:center;gap:8px;background:var(--zalo);color:#fff;font-weight:800;padding:10px 18px;border-radius:999px;margin-top:6px}
+  .foot-bot{border-top:1px solid rgba(255,255,255,.15);margin-top:34px;padding-top:20px;text-align:center;font-size:.82rem;color:rgba(255,255,255,.6)}
+
+  /* floating zalo */
+  .zalo-float{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:10px}
+  .zalo-float .lbl{background:#fff;color:var(--ink);font-weight:700;font-size:.86rem;padding:9px 14px;border-radius:999px;box-shadow:var(--shadow)}
+  .zalo-btn{position:relative;width:58px;height:58px;border-radius:50%;background:var(--zalo);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;box-shadow:0 8px 22px rgba(0,104,255,.45);flex:0 0 auto}
+  .zalo-btn::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--zalo);animation:pulse 2s infinite;z-index:-1}
+  @keyframes pulse{0%{transform:scale(1);opacity:.6}70%{transform:scale(1.7);opacity:0}100%{opacity:0}}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .menu{display:none}
+    .burger{display:block}
+    .menu.open{display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--brand);padding:10px 16px 16px;gap:2px;box-shadow:var(--shadow)}
+    .menu.open a{width:100%}
+    .hero{padding-bottom:90px}
+    .hero-grid{grid-template-columns:1fr;gap:30px;padding-top:34px}
+    .hero-copy{padding-top:0;text-align:center}
+    .hero-copy .lede{margin-left:auto;margin-right:auto}
+    .hero .hero-copy .trust{justify-content:center}
+    .hero .hero-copy .actions{justify-content:center}
+    .tgrid{grid-template-columns:1fr}
+    .cgrid{grid-template-columns:1fr 1fr}
+    .fgrid{grid-template-columns:1fr}
+    .fgrid2{grid-template-columns:1fr;gap:26px}
+  }
+  @media(max-width:560px){
+    .section{padding:52px 0}
+    .cgrid{grid-template-columns:1fr}
+    .trust{gap:14px 20px}
+    .zalo-float .lbl{display:none}
+    .hero-copy h1{font-size:2rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="IELTS WinWin">
+      <span class="brand-txt">
+        <span><span class="w1">Win</span><span class="w2">Win</span></span>
+        <small>Foreign Language Center</small>
+      </span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#khoa-hoc">Khóa học</a>
+      <a href="#thanh-tich">Thành tích</a>
+      <a href="#cam-nhan">Cảm nhận</a>
+      <a href="#khac-biet">Vì sao WinWin</a>
+      <a href="#dang-ky" class="cta">Đăng ký học thử</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow hero-tag">🏆 You Win — We Win</span>
+      <h1>Bứt phá <span class="hl">IELTS 7.0+</span> cùng WinWin</h1>
+      <p class="lede">Lộ trình cá nhân hóa, lớp nhỏ và đội ngũ giảng viên tận tâm — học đúng trọng tâm để chạm mục tiêu của bạn.</p>
+      <div class="trust">
+        <div><b>8.5</b><span>Band cao nhất của học viên</span></div>
+        <div><b>7.0–8.5</b><span>Rất nhiều bạn đạt band cao</span></div>
+        <div><b>1:1</b><span>Kèm sát từng kỹ năng</span></div>
+      </div>
+      <div class="actions">
+        <a href="#dang-ky" class="btn btn-primary">Đăng ký học thử miễn phí</a>
+        <a href="#khoa-hoc" class="btn btn-ghost">Xem các khóa học</a>
+      </div>
+    </div>
+
+    <!-- REGISTRATION FORM -->
+    <div class="form-card" id="dang-ky">
+      <div id="form-inner">
+        <h2>Đăng ký học thử</h2>
+        <p class="sub">WinWin sẽ liên hệ tư vấn qua Email hoặc Zalo.</p>
+        <form id="reg-form">
+          <div class="field">
+            <label>Họ và tên <span class="req">*</span></label>
+            <input type="text" name="ho_ten" required placeholder="Nguyễn Văn A">
+          </div>
+          <div class="field">
+            <label>Số điện thoại / Zalo <span class="req">*</span></label>
+            <input type="tel" name="dien_thoai" required pattern="[0-9\s\.\+\-]{8,15}" placeholder="09xx xxx xxx">
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="email@example.com">
+          </div>
+          <div class="field">
+            <label>Khóa học quan tâm <span class="req">*</span></label>
+            <select name="khoa_hoc" required>
+              <option value="">— Chọn khóa học —</option>
+              <optgroup label="IELTS">
+                <option>Pre-IELTS</option>
+                <option>Basic IELTS</option>
+                <option>Advanced IELTS</option>
+                <option>IELTS 1:1</option>
+                <option>Mock Test IELTS</option>
+              </optgroup>
+              <optgroup label="Tiếng Anh trẻ em (Cambridge)">
+                <option>Pre-Starters / Starters</option>
+                <option>Movers / Flyers</option>
+                <option>KET - PET</option>
+                <option>FCE</option>
+              </optgroup>
+              <optgroup label="Tiếng Trung">
+                <option>Tiếng Trung sơ cấp</option>
+                <option>Tiếng Trung trung cấp</option>
+              </optgroup>
+              <option>Chưa rõ — cần tư vấn</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Khung lịch mong muốn</label>
+            <select name="lich_hoc">
+              <option value="">— Chọn khung lịch —</option>
+              <option>Trong tuần (buổi tối)</option>
+              <option>Trong tuần (ban ngày)</option>
+              <option>Cuối tuần</option>
+              <option>Linh hoạt — sắp theo lịch của tôi</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Lời nhắn</label>
+            <textarea name="loi_nhan" placeholder="Mục tiêu band, trình độ hiện tại, thời gian dự thi..."></textarea>
+          </div>
+          <label class="consent">
+            <input type="checkbox" required>
+            <span>Tôi đồng ý để WinWin liên hệ tư vấn qua Điện thoại / Zalo / Email.</span>
+          </label>
+          <!-- honeypot -->
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Gửi đăng ký →</button>
+          <p class="form-note">Miễn phí • Không ràng buộc • Phản hồi trong 24h</p>
+        </form>
+      </div>
+      <div class="thanks" id="thanks" style="display:none">
+        <div class="ok">✓</div>
+        <h3>Đã nhận đăng ký!</h3>
+        <p>Cảm ơn bạn 💚 WinWin sẽ liên hệ trong thời gian sớm nhất. Cần hỗ trợ ngay?</p>
+        <a class="btn btn-primary" href="https://zalo.me/0869688153" target="_blank" rel="noopener">💬 Nhắn Zalo Ms. Uyên</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS BAND -->
+<div class="ach-band" id="thanh-tich">
+  <div class="ach-scroll">
+    <div class="ach"><div class="score">8.5</div><div class="who">Đào Khánh Ngân</div><div class="from">THPT Nguyễn Thượng Hiền</div></div>
+    <div class="ach"><div class="score">8.0</div><div class="who">Anh Duy</div><div class="from">Học viên</div></div>
+    <div class="ach"><div class="score">8.0</div><div class="who">Nguyễn Vinh</div><div class="from">Học sinh lớp 12</div></div>
+    <div class="ach"><div class="score">8.0</div><div class="who">Vĩnh Khang</div><div class="from">Sinh viên</div></div>
+    <div class="ach"><div class="score">8.0</div><div class="who">Phương Trinh</div><div class="from">Sinh viên</div></div>
+    <div class="ach"><div class="score">8.0</div><div class="who">Thượng Trần</div><div class="from">THPT Lê Hồng Phong</div></div>
+    <div class="ach"><div class="score">7.5</div><div class="who">Việt Châu</div><div class="from">THPT Nguyễn Thượng Hiền</div></div>
+    <div class="ach"><div class="score">7.5</div><div class="who">Trâm Anh</div><div class="from">ĐH Kinh Tế</div></div>
+    <div class="ach"><div class="score">7.5</div><div class="who">Minh Khôi</div><div class="from">THPT Nguyễn Thượng Hiền</div></div>
+    <div class="ach"><div class="score">7.0</div><div class="who">Tuấn Kiệt</div><div class="from">Sinh viên</div></div>
+    <div class="ach"><div class="score">7.0</div><div class="who">An Khang</div><div class="from">Sinh viên</div></div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="cam-nhan">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Cảm nhận học viên</span>
+      <h2>Học viên nói gì về WinWin?</h2>
+      <p>Những chia sẻ thật của học viên — nguồn động lực để đội ngũ WinWin ngày một tốt hơn.</p>
+    </div>
+    <div class="tgrid">
+      <div class="quote">
+        <p>Em rất tâm đắc với giáo trình Writing tại WinWin — tài liệu phong phú, cấu trúc chặt chẽ. Sau nhiều lần luyện đề em mang về 2 con điểm 9.0. Luyện Speaking với món đặc sản "hot seat" cho em cảm giác như phòng thi thật. Lần đầu em đạt 8.0, sau khi retake Reading lên 9.0 em đạt overall 8.5. Cảm ơn tất cả thầy cô và trợ giảng ở IELTS WinWin!</p>
+        <div class="who">
+          <div class="av">Đ</div>
+          <div><b>Đào Khánh Ngân</b><span>04-2025 · Đánh giá học viên</span></div>
+          <span class="badge">IELTS 8.5</span>
+        </div>
+      </div>
+      <div class="quote">
+        <p>Mình biết đến WinWin qua bạn bè và thấy thật sự xứng đáng. Các anh chị giảng viên và cô ở đây rất nhiệt huyết, luôn chăm lo cho học sinh từng li từng tí. Nhờ sự tận tâm của các anh chị mà mình đã vượt được target đặt ra ban đầu. Thank you so much mr. Minh Trí, miss Uyên Nghi và miss Trinh!</p>
+        <div class="who">
+          <div class="av">T</div>
+          <div><b>Tô Thanh Giang</b><span>04-2023 · Đánh giá học viên</span></div>
+        </div>
+      </div>
+      <div class="quote">
+        <p>Trước đó mình từng học IELTS ở vài trung tâm đại trà có tên tuổi, và mình khẳng định lớp của cô Trinh Đào hiệu quả hơn. Lớp tập trung từng cá nhân, sĩ số gọn dưới 14 người nên Writing và Speaking đều được feedback rất kỹ. Lịch học rất linh hoạt, chọn được nhiều giờ trong tuần. Sau một thời gian là tiến bộ rõ rệt!</p>
+        <div class="who">
+          <div class="av">V</div>
+          <div><b>Vinh Hà</b><span>12-2022 · Đánh giá học viên</span></div>
+        </div>
+      </div>
+      <div class="quote">
+        <p>Khoảng thời gian đồng hành cùng WinWin thật sự vô cùng vui vẻ và đáng nhớ. Đội ngũ trợ giảng dễ thương, dễ gần mà còn vô cùng tâm huyết tới từng bạn học. Học ở WinWin bạn sẽ nhận được nhiều hơn cả kiến thức — và thấy rằng IELTS không hề đáng sợ!</p>
+        <div class="who">
+          <div class="av">M</div>
+          <div><b>Minh Thư</b><span>04-2023 · Đánh giá học viên</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="section alt" id="khoa-hoc">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Khóa học</span>
+      <h2>Chọn lộ trình phù hợp với bạn</h2>
+      <p>Từ mất gốc đến band cao — WinWin có lộ trình cho từng trình độ, cùng các khóa Tiếng Anh trẻ em (Cambridge) và Tiếng Trung.</p>
+    </div>
+    <div class="cgrid">
+      <div class="course">
+        <span class="tag">IELTS</span>
+        <h3>Pre-IELTS</h3>
+        <span class="goal">Mất gốc → nền tảng</span>
+        <ul>
+          <li>Dành cho bạn mất gốc, mới tìm hiểu IELTS</li>
+          <li>Làm quen cấu trúc đề & 4 kỹ năng Nghe–Nói–Đọc–Viết</li>
+          <li>Ngữ pháp, từ vựng, phát âm cơ bản</li>
+        </ul>
+        <a href="#dang-ky" class="go">Tư vấn khóa này →</a>
+      </div>
+      <div class="course">
+        <span class="tag">IELTS</span>
+        <h3>Basic IELTS</h3>
+        <span class="goal">Xây nền tảng vững</span>
+        <ul>
+          <li>Cho bạn có từ vựng giao tiếp cơ bản</li>
+          <li>Từ vựng theo chủ đề & thành thạo bảng IPA</li>
+          <li>Hình thành tư duy tiếng Anh, viết câu lưu loát</li>
+        </ul>
+        <a href="#dang-ky" class="go">Tư vấn khóa này →</a>
+      </div>
+      <div class="course">
+        <span class="tag">IELTS</span>
+        <h3>Advanced IELTS</h3>
+        <span class="goal">Chinh phục band cao</span>
+        <ul>
+          <li>Cho bạn đã có nền tảng, muốn nâng band</li>
+          <li>Cấu trúc & từ vựng cấp độ cao theo chủ đề thi thật</li>
+          <li>Luyện chuyên sâu cả 4 kỹ năng</li>
+        </ul>
+        <a href="#dang-ky" class="go">Tư vấn khóa này →</a>
+      </div>
+      <div class="course">
+        <span class="tag">IELTS</span>
+        <h3>IELTS 1:1</h3>
+        <span class="goal">Kèm riêng, đi nhanh</span>
+        <ul>
+          <li>Giáo viên theo sát 100% quá trình học</li>
+          <li>Lộ trình cá nhân hóa theo mục tiêu của bạn</li>
+          <li>Đạt chứng chỉ trong thời gian ngắn</li>
+        </ul>
+        <a href="#dang-ky" class="go">Tư vấn khóa này →</a>
+      </div>
+      <div class="course">
+        <span class="tag">IELTS</span>
+        <h3>Mock Test IELTS</h3>
+        <span class="goal">Luyện đề như thi thật</span>
+        <ul>
+          <li>Cho bạn đã có nền tảng từ vựng, ngữ pháp</li>
+          <li>Giải đề chi tiết từng dạng, từng kỹ năng</li>
+          <li>Làm quen áp lực & nhịp độ phòng thi thật</li>
+        </ul>
+        <a href="#dang-ky" class="go">Tư vấn khóa này →</a>
+      </div>
+      <div class="course">
+        <span class="tag">Cambridge · Trẻ em</span>
+        <h3>Tiếng Anh trẻ em</h3>
+        <span class="goal">Pre-Starters → FCE</span>
+        <ul>
+          <li>Pre-Starters, Starters, Movers, Flyers</li>
+          <li>Luyện chứng chỉ KET – PET (lớp 8–9)</li>
+          <li>FCE cho trình độ nâng cao</li>
+        </ul>
+        <a href="#dang-ky" class="go">Tư vấn khóa này →</a>
+      </div>
+      <div class="course">
+        <span class="tag">Ngoại ngữ</span>
+        <h3>Tiếng Trung</h3>
+        <span class="goal">Sơ cấp → Trung cấp</span>
+        <ul>
+          <li>Tiếng Trung sơ cấp 1 & 2</li>
+          <li>Tiếng Trung trung cấp 1</li>
+          <li>Lộ trình từ đầu cho người mới bắt đầu</li>
+        </ul>
+        <a href="#dang-ky" class="go">Tư vấn khóa này →</a>
+      </div>
+      <div class="course" style="border-top-color:var(--accent);background:linear-gradient(180deg,#fffdf5,#fff)">
+        <span class="tag" style="color:var(--accent-dark)">Miễn phí</span>
+        <h3>Học thử & tư vấn</h3>
+        <span class="goal" style="background:#fbf1d6;color:var(--accent-dark)">Trải nghiệm trước</span>
+        <ul>
+          <li>Học thử một buổi tại lớp</li>
+          <li>Kiểm tra trình độ & tư vấn lớp phù hợp</li>
+          <li>Hoàn toàn miễn phí, không ràng buộc</li>
+        </ul>
+        <a href="#dang-ky" class="go">Đăng ký ngay →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="khac-biet">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Vì sao chọn WinWin</span>
+      <h2>Điều làm nên khác biệt</h2>
+      <p>"You Win, We Win" — thành công của học viên chính là thành công của WinWin.</p>
+    </div>
+    <div class="fgrid">
+      <div class="feat"><div class="ic">🎯</div><h3>Học đúng trọng tâm</h3><p>Bắt đầu từ con số 0 và đi thẳng tới band điểm mục tiêu — không lan man, không lãng phí thời gian.</p></div>
+      <div class="feat"><div class="ic">🧭</div><h3>Lộ trình cá nhân hóa</h3><p>Lộ trình học đa dạng, bạn tự do lựa chọn phù hợp với nhu cầu và mục tiêu riêng của mình.</p></div>
+      <div class="feat"><div class="ic">👥</div><h3>Lớp nhỏ, kèm sát</h3><p>Sĩ số gọn nên Writing & Speaking của mỗi học viên đều được thầy cô và trợ giảng feedback kỹ lưỡng.</p></div>
+      <div class="feat"><div class="ic">💚</div><h3>Đội ngũ tận tâm</h3><p>Giảng viên và trợ giảng thân thiện, nhiệt huyết, chăm lo học sinh "từng li từng tí".</p></div>
+      <div class="feat"><div class="ic">🔥</div><h3>"Hot seat" luyện Speaking</h3><p>Món đặc sản của WinWin — luyện phản xạ nói trong không khí như phòng thi thật.</p></div>
+      <div class="feat"><div class="ic">💰</div><h3>Học phí hợp lý</h3><p>Học phí phù hợp cùng nhiều ưu đãi đặc biệt — hiệu quả mà vẫn nhẹ nhàng cho ví.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER BAND -->
+<div class="partner">
+  <div class="wrap">
+    <div class="lab">Đối tác chiến lược</div>
+    <div class="partner-row">
+      <div class="p-logo"><img src="winwin-logo.png" alt="IELTS WinWin logo"></div>
+      <span class="p-x">✕</span>
+      <div class="affl"><img src="affluence-logo.png" alt="Affluence logo"><span class="wm">Affluence</span></div>
+    </div>
+    <p>IELTS WinWin hợp tác cùng <b>Affluence</b> — nền tảng kết nối trường học &amp; mạng lưới marketers, đồng hành đưa chương trình chất lượng đến với nhiều học viên hơn. Tìm hiểu tại <a href="https://affluence.vn" target="_blank" rel="noopener">affluence.vn</a>.</p>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div class="wrap">
+    <h2>Sẵn sàng bứt phá IELTS cùng WinWin?</h2>
+    <p>Đăng ký học thử & tư vấn miễn phí — WinWin sẽ liên hệ trong 24h.</p>
+    <a href="#dang-ky" class="btn btn-white">Đăng ký học thử miễn phí</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap fgrid2">
+    <div>
+      <div class="brand"><span class="w1" style="color:#fff">Win</span><span class="w2" style="color:var(--accent)">Win</span></div>
+      <p style="font-weight:700;color:#fff;margin-bottom:6px">Foreign Language Center</p>
+      <p>Cơ sở 1: 118 Nguyễn Xuân Khoát,<br>P. Tân Thành, Q. Tân Phú, TP. HCM</p>
+    </div>
+    <div>
+      <h4>Khóa học</h4>
+      <ul>
+        <li><a href="#khoa-hoc">IELTS (Pre / Basic / Advanced)</a></li>
+        <li><a href="#khoa-hoc">IELTS 1:1 & Mock Test</a></li>
+        <li><a href="#khoa-hoc">Tiếng Anh trẻ em (Cambridge)</a></li>
+        <li><a href="#khoa-hoc">Tiếng Trung</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Liên hệ &amp; tư vấn</h4>
+      <p>Đăng ký học thử và mọi thắc mắc, vui lòng nhắn Zalo:</p>
+      <a class="foot-zalo" href="https://zalo.me/0869688153" target="_blank" rel="noopener">💬 Zalo Ms. Uyên</a>
+    </div>
+  </div>
+  <div class="wrap foot-bot">© 2026 WinWin Foreign Language Center · IELTS WinWin. Landing page bởi Affluence.</div>
+</footer>
+
+<!-- FLOATING ZALO -->
+<a class="zalo-float" href="https://zalo.me/0869688153" target="_blank" rel="noopener" aria-label="Nhắn Zalo Ms. Uyên">
+  <span class="lbl">💬 Nhắn Zalo Ms. Uyên</span>
+  <span class="zalo-btn">Zalo</span>
+</a>
+
+<script>
+  // mobile menu
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A')menu.classList.remove('open')});
+
+  // ---- Google Form wiring (entry IDs filled in Step 3) ----
+  var GFORM={
+    action:'https://docs.google.com/forms/d/e/1FAIpQLSeAngUyFgpJhEJe0bbLSaLHEVcPKpmbuOoCRAlck7p8Ooew6g/formResponse',
+    map:{
+      ho_ten:'entry.440821389',
+      dien_thoai:'entry.1353923435',
+      email:'entry.1393782257',
+      khoa_hoc:'entry.1421154074',
+      lich_hoc:'entry.920344657',
+      loi_nhan:'entry.1766848766'
+    }
+  };
+  var form=document.getElementById('reg-form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    // honeypot: silently succeed for bots
+    if(form._honey && form._honey.value){showThanks();return;}
+    var btn=document.getElementById('submit-btn');
+    btn.disabled=true;btn.textContent='Đang gửi...';
+
+    if(GFORM.action){
+      var fd=new FormData();
+      for(var k in GFORM.map){
+        if(GFORM.map[k] && form[k]) fd.append(GFORM.map[k], form[k].value);
+      }
+      fetch(GFORM.action,{method:'POST',mode:'no-cors',body:fd})
+        .then(function(){showThanks();})
+        .catch(function(){
+          btn.disabled=false;btn.textContent='Gửi đăng ký →';
+          alert('Có lỗi khi gửi. Vui lòng nhắn Zalo Ms. Uyên: https://zalo.me/0869688153');
+        });
+    }else{
+      // backend not wired yet
+      setTimeout(showThanks,400);
+    }
+  });
+  function showThanks(){
+    document.getElementById('form-inner').style.display='none';
+    document.getElementById('thanks').style.display='block';
+  }
+</script>
+</body>
+</html>
