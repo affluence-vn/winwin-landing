@@ -589,41 +589,24 @@
   burger.addEventListener('click',function(){menu.classList.toggle('open')});
   menu.addEventListener('click',function(e){if(e.target.tagName==='A')menu.classList.remove('open')});
 
-  // ---- Google Form wiring (entry IDs filled in Step 3) ----
-  var GFORM={
-    action:'https://docs.google.com/forms/d/e/1FAIpQLSeAngUyFgpJhEJe0bbLSaLHEVcPKpmbuOoCRAlck7p8Ooew6g/formResponse',
-    map:{
-      ho_ten:'entry.440821389',
-      dien_thoai:'entry.1353923435',
-      email:'entry.1393782257',
-      khoa_hoc:'entry.1421154074',
-      lich_hoc:'entry.920344657',
-      loi_nhan:'entry.1766848766'
-    }
-  };
+  // ---- Shared Affluence leads webhook (email từ hello@affluence.vn) ----
+  var CLIENT='winwin';
+  var ENDPOINT='https://script.google.com/macros/s/AKfycbzGsRtSIzAHBPjuWWGrtaoNoChTBQm57FolpeP4jTMVaZ9IHPx8LEurANO2TolaIEvW/exec';
+  var FIELDS=['ho_ten','dien_thoai','email','khoa_hoc','lich_hoc','loi_nhan'];
   var form=document.getElementById('reg-form');
   form.addEventListener('submit',function(e){
     e.preventDefault();
     // honeypot: silently succeed for bots
     if(form._honey && form._honey.value){showThanks();return;}
-    var btn=document.getElementById('submit-btn');
-    btn.disabled=true;btn.textContent='Đang gửi...';
-
-    if(GFORM.action){
-      var fd=new FormData();
-      for(var k in GFORM.map){
-        if(GFORM.map[k] && form[k]) fd.append(GFORM.map[k], form[k].value);
-      }
-      fetch(GFORM.action,{method:'POST',mode:'no-cors',body:fd})
-        .then(function(){showThanks();})
-        .catch(function(){
-          btn.disabled=false;btn.textContent='Gửi đăng ký →';
-          alert('Có lỗi khi gửi. Vui lòng nhắn Zalo Ms. Uyên: https://zalo.me/0869688153');
-        });
-    }else{
-      // backend not wired yet
-      setTimeout(showThanks,400);
-    }
+    var body=new URLSearchParams();
+    body.append('client',CLIENT);
+    FIELDS.forEach(function(k){ if(form[k]) body.append(k, form[k].value); });
+    // Gửi nền (keepalive) — phản hồi là opaque (no-cors) nên không cần chờ; hiện lời cảm ơn ngay.
+    fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:body,keepalive:true})
+      .catch(function(){
+        alert('Có lỗi khi gửi. Vui lòng nhắn Zalo Ms. Uyên: https://zalo.me/0869688153');
+      });
+    showThanks();
   });
   function showThanks(){
     document.getElementById('form-inner').style.display='none';
